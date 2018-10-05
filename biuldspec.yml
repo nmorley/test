@@ -1,0 +1,11 @@
+version: 0.2
+
+phases:
+  build:
+    commands:
+      - dotnet restore AWSLambdaTEST.sln
+      - dotnet publish -c release -o ./build_output AWSLambdaTEST.sln
+artifacts:
+  files:
+    - AWSLambdaTEST/build_output/**/*
+  discard-paths: yes
