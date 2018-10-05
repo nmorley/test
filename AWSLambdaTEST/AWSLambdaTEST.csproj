@@ -7,22 +7,15 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <None Remove="awslambdatest.template" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Compile Include="awslambdatest.template">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Compile>
-  </ItemGroup>
-
-  <ItemGroup>
     <PackageReference Include="Amazon.Lambda.Core" Version="1.0.0" />
     <PackageReference Include="Amazon.Lambda.Serialization.Json" Version="1.4.0" />
   </ItemGroup>
 
   <ItemGroup>
     <None Update="aws-lambda-tools-defaults.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="awslambdatest.template">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
   </ItemGroup>
