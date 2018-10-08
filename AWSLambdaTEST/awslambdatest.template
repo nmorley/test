@@ -3,14 +3,14 @@
     "Description"              : "An AWS Serverless Application.",
     "Transform"                : "AWS::Serverless-2016-10-31",
     "Resources"                : {
-        "Get" : {
+        "POST" : {
             "Type" : "AWS::Serverless::Function",
             "Properties" : {
 			"CodeUri": "s3://codepipeline-eu-west-1-429122573336/test/MyAppBuild/6pdJH7A",
                 "Events" : {
                     "PutResource" : {
                         "Properties" : {
-                            "Method" : "GET",
+                            "Method" : "POST",
                             "Path"   : "/"
                         },
                         "Type"       : "Api"

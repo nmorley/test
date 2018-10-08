@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.Extensions.PlatformAbstractions;
 
 using Amazon.Lambda.Core;
 
@@ -19,9 +20,18 @@ namespace AWSLambdaTEST
         /// <param name="input"></param>
         /// <param name="context"></param>
         /// <returns></returns>
-        public string FunctionHandler(ILambdaContext context)
+        public string FunctionHandler(string input, ILambdaContext context)
         {
-            return "TEST"; // input?.ToUpper();
+
+            ApplicationEnvironment app = PlatformServices.Default.Application;
+            string version = app.ApplicationVersion;
+
+            if ( input == null)
+            {
+                return $"{app.ApplicationVersion} - no input";
+            }
+
+            return $"{app.ApplicationVersion} - {input}"; 
         }
     }
 }
