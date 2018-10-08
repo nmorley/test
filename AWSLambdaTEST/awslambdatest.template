@@ -6,7 +6,7 @@
         "Get" : {
             "Type" : "AWS::Serverless::Function",
             "Properties" : {
-			"CodeUri": "https://s3-eu-west-1.amazonaws.com/codepipeline-eu-west-1-429122573336/test/MyAppBuild/6pdJH7A",
+			"CodeUri": "s3://codepipeline-eu-west-1-429122573336/test/MyAppBuild/6pdJH7A",
                 "Events" : {
                     "PutResource" : {
                         "Properties" : {
