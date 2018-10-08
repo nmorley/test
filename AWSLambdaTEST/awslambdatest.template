@@ -6,15 +6,6 @@
         "Get" : {
             "Type" : "AWS::Serverless::Function",
             "Properties" : {
-                "Events" : {
-                    "PutResource" : {
-                        "Properties" : {
-                            "Method" : "GET",
-                            "Path"   : "/"
-                        },
-                        "Type"       : "Api"
-                    }
-                },
                 "Handler" : "AWSLambdaTEST::AWSLambdaTEST.Function::FunctionHandler",
                 "MemorySize" : 256,
                 "Policies"   : [
