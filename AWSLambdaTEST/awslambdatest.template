@@ -24,7 +24,7 @@
                 "Role"       : "arn:aws:iam::334470386631:role/DojoRolePipeline",
                 "Runtime"    : "dotnetcore2.1",
                 "Timeout"    : 30
-            }
+            } 
         }
     }
 }
