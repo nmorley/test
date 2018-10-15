@@ -1,0 +1,31 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Description: An AWS Serverless Application.
+Transform: AWS::Serverless-2016-10-31
+
+Parameters:
+    BucketName:
+        Type: String
+    CodeKey:
+        Type: String
+
+Resources:
+  POST:
+    Type: AWS::Serverless::Function
+    Properties:
+      CodeUri: 
+	    Bucket: !Ref BucketName,
+	    Key: !Ref CodeKey
+
+      Events:
+        PutResource:
+          Properties:
+            Method: POST
+            Path: /
+          Type: Api
+      Handler: AWSLambdaTEST::AWSLambdaTEST.Function::FunctionHandler
+      MemorySize: 256
+      Policies:
+        - AWSLambdaBasicExecutionRole
+      Role: arn:aws:iam::334470386631:role/DojoRolePipeline
+      Runtime: dotnetcore2.1
+      Timeout: 30

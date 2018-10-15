@@ -17,7 +17,7 @@
     <None Update="aws-lambda-tools-defaults.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Update="awslambdatest.template">
+    <None Update="awslambdatest.template.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
   </ItemGroup>
