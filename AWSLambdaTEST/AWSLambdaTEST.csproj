@@ -14,7 +14,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <None Update="aswlambdatest.template">
+    <None Update="awslambdatest.template">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
     <None Update="aws-lambda-tools-defaults.json">
