@@ -12,9 +12,9 @@ Resources:
   POST:
     Type: AWS::Serverless::Function
     Properties:
-      CodeUri: 
-	    Bucket: !Ref BucketName,
-	    Key: !Ref CodeKey
+      CodeUri:
+        Bucket: !Ref BucketName,
+        Key: !Ref CodeKey
 
       Events:
         PutResource:
