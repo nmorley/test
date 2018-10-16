@@ -3,18 +3,16 @@ Description: An AWS Serverless Application.
 Transform: AWS::Serverless-2016-10-31
 
 Parameters:
-    BucketName:
+    OutputBucketName:
         Type: String
-    CodeKey:
-        Type: String
+
 
 Resources:
   POST:
     Type: AWS::Serverless::Function
     Properties:
       CodeUri:
-        Bucket: !Ref BucketName,
-        Key: !Ref CodeKey
+        Bucket: !Ref OutputBucketName
 
       Events:
         PutResource:
