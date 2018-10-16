@@ -5,6 +5,7 @@ phases:
     commands:
       - dotnet restore AWSLambdaTEST.sln
       - dotnet publish -c release -o ./build_output AWSLambdaTEST.sln
+      - printenv
 artifacts:
   files:
     - AWSLambdaTEST/build_output/**/*
